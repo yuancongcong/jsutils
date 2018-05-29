@@ -1,0 +1,68 @@
+.tc{
+    text-align: center;
+}
+.tr{
+    text-align: right;
+}
+.tl{
+    text-align: left;
+}
+.fr{
+    float: right;
+}
+.fl{
+    float: left;
+}
+
+.auto-x{
+    margin-left: auto;
+    margin-right: auto;
+}
+.blod{
+    font-weight: 700;
+}
+
+.pos-bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.c-333{
+    color: #333!important;
+}
+.c-666{
+    color: #666!important;
+}
+.c-999{
+    color: #999!important;
+}
+.c-primary{
+    color:#2873FF!important;
+}
+.bgfff{
+    background: #fff;
+}
+
+.fc{
+    display: flex;
+    align-items: center;
+}
+.fcc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fcb{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+//font-size
+@for $i from 12 through 18{
+    .fs-#{$i}{
+        font-size: #{$i/50}rem!important;
+    }
+}

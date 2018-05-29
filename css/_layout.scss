@@ -1,0 +1,32 @@
+$space : .1rem;
+
+.row{
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+}
+[class*=col-] {
+    box-sizing: border-box;
+}
+//font-size
+@for $i from 1 through 24{
+    .col-#{$i}{
+        width: #{(100/24)*$i+'%'};
+    }
+}
+
+$sizes: (
+    sm: $space,
+    md: $space*2,
+    lg: $space*4
+);
+@each $k, $v in $sizes {
+    .gutter-#{$k}{
+        margin-left:-#{$v};
+        margin-right:-#{$v};
+        [class^="col-"]{
+            padding-left: #{$v};
+            padding-right: #{$v};
+        }
+    }
+}
